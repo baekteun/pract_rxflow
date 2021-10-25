@@ -21,6 +21,6 @@ class baseVC: UIViewController{
         configureVC()
     }
     // MAKR: - Helpers
-    func configureVC(){view.backgroundColor = .white}
+    func configureVC(){view.backgroundColor = .white; bind()}
     func bind(){}
 }

@@ -13,6 +13,9 @@
 		46CFE3532726BD3D00E6B827 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46CFE3512726BD3D00E6B827 /* LaunchScreen.storyboard */; };
 		46CFE3632726BE1C00E6B827 /* baseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFE3622726BE1C00E6B827 /* baseVC.swift */; };
 		46CFE3662726E43400E6B827 /* sampleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFE3652726E43400E6B827 /* sampleStep.swift */; };
+		46CFE3682726E59400E6B827 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFE3672726E59400E6B827 /* AppFlow.swift */; };
+		46CFE36B2726E6FC00E6B827 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFE36A2726E6FC00E6B827 /* LoginVC.swift */; };
+		46CFE36D2726E85100E6B827 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CFE36C2726E85100E6B827 /* HomeVC.swift */; };
 		83596D81969C2E6DBC03202B /* Pods_pract_rxflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB8E05238012C3D5D14A24B /* Pods_pract_rxflow.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		46CFE3542726BD3D00E6B827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46CFE3622726BE1C00E6B827 /* baseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseVC.swift; sourceTree = "<group>"; };
 		46CFE3652726E43400E6B827 /* sampleStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleStep.swift; sourceTree = "<group>"; };
+		46CFE3672726E59400E6B827 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		46CFE36A2726E6FC00E6B827 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		46CFE36C2726E85100E6B827 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8EB8E05238012C3D5D14A24B /* Pods_pract_rxflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pract_rxflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +108,7 @@
 		46CFE3602726BE0500E6B827 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				46CFE3692726E6F200E6B827 /* Auth */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -118,8 +125,18 @@
 			isa = PBXGroup;
 			children = (
 				46CFE3652726E43400E6B827 /* sampleStep.swift */,
+				46CFE3672726E59400E6B827 /* AppFlow.swift */,
 			);
 			path = Flows;
+			sourceTree = "<group>";
+		};
+		46CFE3692726E6F200E6B827 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				46CFE36A2726E6FC00E6B827 /* LoginVC.swift */,
+				46CFE36C2726E85100E6B827 /* HomeVC.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		6FEA91362FE27A858E2AE4DD /* Pods */ = {
@@ -254,8 +271,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				46CFE3472726BD3A00E6B827 /* AppDelegate.swift in Sources */,
+				46CFE36D2726E85100E6B827 /* HomeVC.swift in Sources */,
 				46CFE3662726E43400E6B827 /* sampleStep.swift in Sources */,
+				46CFE36B2726E6FC00E6B827 /* LoginVC.swift in Sources */,
 				46CFE3492726BD3A00E6B827 /* SceneDelegate.swift in Sources */,
+				46CFE3682726E59400E6B827 /* AppFlow.swift in Sources */,
 				46CFE3632726BE1C00E6B827 /* baseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
