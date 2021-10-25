@@ -6,13 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
-import UIKit
 
 class baseVC: UIViewController{
     // MARK: - Properties
     let bound = UIScreen.main.bounds
-    let disposeBag = DisposeBag()
+    let disposeBag: DisposeBag = .init()
     
     // MARK: - Lifecycle
     @available(*, unavailable)
@@ -22,4 +22,5 @@ class baseVC: UIViewController{
     }
     // MAKR: - Helpers
     func configureVC(){view.backgroundColor = .white}
+    func bind(){}
 }
