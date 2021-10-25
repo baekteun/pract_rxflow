@@ -19,7 +19,28 @@ class AppFlow: Flow{
     }
     
     func navigate(to step: Step) -> FlowContributors {
-        guard let step = step as? sampleStep { return.none }
-        
+        guard let step = step as? sampleStep else { return.none }
+        switch step {
+        case .LoginIsRequired:
+            return self.navigateToLogin()
+        case .HomeIsRequired:
+            return self.navigatToHome()
+        }
+    }
+    
+    private func navigateToLogin() -> FlowContributors{
+        let flow = LoginFlow()
+        Flows.use(flow, when: .created) { root in
+            self.window.rootViewController = root
+        }
+        return .one(flowContributor: .contribute(withNextPresentable: flow, withNextStepper: OneStepper(withSingleStep: sampleStep.LoginIsRequired)))
+    }
+    
+    private func navigatToHome() -> FlowContributors{
+        let flow = HomeFlow()
+        Flows.use(flow, when: .created) { root in
+            self.window.rootViewController = root
+        }
+        return .one(flowContributor: .contribute(withNextPresentable: flow, withNextStepper: OneStepper(withSingleStep: sampleStep.HomeIsRequired)))
     }
 }

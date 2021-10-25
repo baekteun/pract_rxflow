@@ -24,6 +24,7 @@ class LoginVC: baseVC, Stepper{
         $0.setTitle("Login", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 20)
+        $0.backgroundColor = .blue
     }
     
     // MARK: - Helpers
@@ -37,6 +38,7 @@ class LoginVC: baseVC, Stepper{
     }
     private func setLayout(){
         loginBtn.snp.makeConstraints {
+            $0.height.equalTo(bound.height*0.1)
             $0.left.right.equalToSuperview().inset(bound.width*0.05)
             $0.bottom.equalToSuperview().inset(bound.height*0.1)
         }

@@ -20,6 +20,7 @@ class HomeVC: baseVC, Stepper{
         $0.setTitle("Logout", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 20)
+        $0.backgroundColor = .systemRed
     }
     
     // MARK: - Helpers
@@ -32,8 +33,8 @@ class HomeVC: baseVC, Stepper{
         [logoutBtn].forEach{view.addSubview($0)}
     }
     private func setLayout(){
-        
         logoutBtn.snp.makeConstraints {
+            $0.height.equalTo(bound.height*0.1)
             $0.left.right.equalToSuperview().inset(bound.width*0.05)
             $0.bottom.equalToSuperview().inset(bound.height*0.1)
         }
